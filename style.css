@@ -1,0 +1,12 @@
+body {
+    background-color: #363639;
+    display: flex;
+    color: white;
+}
+
+.field {
+    align-items: center;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
