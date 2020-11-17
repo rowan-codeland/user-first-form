@@ -1,8 +1,9 @@
 body {
+    height: 100vh;
     background-color: #363639;
     display: flex;
     color: white;
-/*  filter: blur(5px); */
+    position: relative;
 }
 
 form {
@@ -10,6 +11,7 @@ form {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 }
     
 /* #6CC091 */
