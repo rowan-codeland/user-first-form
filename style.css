@@ -2,11 +2,14 @@ body {
     background-color: #363639;
     display: flex;
     color: white;
+/*  filter: blur(5px); */
 }
 
-.field {
+form {
     align-items: center;    
     position: absolute;
     top: 50%;
     left: 50%;
 }
+    
+/* #6CC091 */
