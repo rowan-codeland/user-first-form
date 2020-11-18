@@ -15,7 +15,7 @@ for (var i = 0; i < questionContainer.length; i++) {
     this.className += " active";
   });
 }
-*/
+
 
 function smoothScroll (target,duration) {
     var target = document.getElementById(target);
@@ -23,7 +23,7 @@ function smoothScroll (target,duration) {
     var startPosition = window.pageYOffset;
     var distance = targetPosition - startPosition;
     var startTime = null;
-    console.log(targetPosition)
+    console.log(target)
 
     function animation(currentTime){
         if(startTime === null) startTime = currentTime;
@@ -43,6 +43,40 @@ function smoothScroll (target,duration) {
     requestAnimationFrame(animation);
 }
 
+function smoothScroll2 (option,duration) {
+    var target = document.getElementById(option);
+    var targetPosition = target.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
+    console.log(target)
+
+    function animation(currentTime){
+        if(startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = ease(timeElapsed,startPosition,distance,duration)
+        window.scrollTo(0,run)
+        if(timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+};
+
+    requestAnimationFrame(animation);
+}
+*/
+var scroll_to_one = document.getElementById('question-1');
+var scroll_to_two = document.getElementById('question-2');
+var scroll_to_three = document.getElementById('question-3');
+var scroll_to_four = document.getElementById('question-4');
+var scroll_to_five = document.getElementById('question-5');
+
+
+
 var q1ButtonA = document.getElementById("button-A");
 var q1ButtonB = document.getElementById("button-B");
 var q2ButtonC = document.getElementById("button-C");
@@ -54,27 +88,26 @@ var q4ButtonH = document.getElementById("button-H");
 var q5ButtonI = document.getElementById("button-I");
 
 q1ButtonA.addEventListener("click", function(){
-    smoothScroll("question-2", 1000);
+    scroll_to_two.scrollIntoView({behavior: 'smooth'});
 });
 q1ButtonB.addEventListener("click", function(){
-    smoothScroll("question-2", 1000);
+    scroll_to_two.scrollIntoView({behavior: 'smooth'});
 });
 q2ButtonC.addEventListener("click", function(){
-    smoothScroll("question-3", 1000);
+    scroll_to_three.scrollIntoView({behavior: 'smooth'});
 });
 q2ButtonD.addEventListener("click", function(){
-    smoothScroll("question-3", 1000);
+    scroll_to_three.scrollIntoView({behavior: 'smooth'});
 });
 q3ButtonE.addEventListener("click", function(){
-    smoothScroll("question-4", 1000);
+    scroll_to_four.scrollIntoView({behavior: 'smooth'});
 });
 q3ButtonF.addEventListener("click", function(){
-    smoothScroll("question-4", 1000);
+    scroll_to_four.scrollIntoView({behavior: 'smooth'});
 });
 q4ButtonG.addEventListener("click", function(){
-    smoothScroll("question-5", 1000);
+    scroll_to_five.scrollIntoView({behavior: 'smooth'});
 });
-q5ButtonH.addEventListener("click", function(){
-    smoothScroll("question-5", 1000);
+q4ButtonH.addEventListener("click", function(){
+    scroll_to_five.scrollIntoView({behavior: 'smooth'});
 });
-
