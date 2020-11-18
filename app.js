@@ -43,3 +43,38 @@ function smoothScroll (target,duration) {
     requestAnimationFrame(animation);
 }
 
+var q1ButtonA = document.getElementById("button-A");
+var q1ButtonB = document.getElementById("button-B");
+var q2ButtonC = document.getElementById("button-C");
+var q2ButtonD = document.getElementById("button-D");
+var q3ButtonE = document.getElementById("button-E");
+var q3ButtonF = document.getElementById("button-F");
+var q4ButtonG = document.getElementById("button-G");
+var q4ButtonH = document.getElementById("button-H");
+var q5ButtonI = document.getElementById("button-I");
+
+q1ButtonA.addEventListener("click", function(){
+    smoothScroll("question-2", 1000);
+});
+q1ButtonB.addEventListener("click", function(){
+    smoothScroll("question-2", 1000);
+});
+q2ButtonC.addEventListener("click", function(){
+    smoothScroll("question-3", 1000);
+});
+q2ButtonD.addEventListener("click", function(){
+    smoothScroll("question-3", 1000);
+});
+q3ButtonE.addEventListener("click", function(){
+    smoothScroll("question-4", 1000);
+});
+q3ButtonF.addEventListener("click", function(){
+    smoothScroll("question-4", 1000);
+});
+q4ButtonG.addEventListener("click", function(){
+    smoothScroll("question-5", 1000);
+});
+q5ButtonH.addEventListener("click", function(){
+    smoothScroll("question-5", 1000);
+});
+
