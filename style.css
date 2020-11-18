@@ -1,17 +1,14 @@
-body {
+.field {
     height: 100vh;
-    background-color: #363639;
-    display: flex;
-    color: white;
-    position: relative;
 }
 
-form {
-    align-items: center;    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.btn {
+    max-width: 115px;
+}
+/*
+.active {
+    background-color: #6CC091;
+    align-items: center;
 }
     
-/* #6CC091 */
+ #6CC091 */
